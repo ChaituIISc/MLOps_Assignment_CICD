@@ -50,7 +50,7 @@ jobs:
   fail-job:
       runs-on: ubuntu-latest  
       needs: build-and-push-image
-      if: ${{ needs.build-and-push-image.result != 'success' }}
+      if: ${{ failure() }}
       steps:
       - name: fail the jobs as docker image build job is failed
         run: |
