@@ -1,6 +1,8 @@
 name: Build_Push_Docker_And_Pull_DockerImage
  
 on:
+  push:
+    branches: [ "main" ]
   pull_request:
     branches: ['main']
  
